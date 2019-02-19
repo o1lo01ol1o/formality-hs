@@ -1,0 +1,113 @@
+cabal-version:       2.0
+name:                formality-hs
+version:             0.0.0
+synopsis:            See README for more info
+description:         See README for more info
+homepage:            https://github.com/1o1lo01ol1o/formality-hs
+bug-reports:         https://github.com/1o1lo01ol1o/formality-hs/issues
+license:             MIT
+license-file:        LICENSE
+author:              Tim Pierson
+maintainer:          tim.pierson@gmail.com
+copyright:           2019 Tim Pierson
+category:            language
+build-type:          Simple
+extra-doc-files:     README.md
+                   , CHANGELOG.md
+tested-with:         GHC == 8.4.3, GHC == 8.6.3
+
+source-repository head
+  type:                git
+  location:            https://github.com/1o1lo01ol1o/formality-hs.git
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     FormalityHs
+                       
+
+  build-depends:       base >= 4.11.1.0 && < 4.13
+                     
+
+  ghc-options:         -Wall
+                       -Wincomplete-uni-patterns
+                       -Wincomplete-record-updates
+                       -Wcompat
+                       -Widentities
+                       -Wredundant-constraints
+                       -fhide-source-paths
+                       -Wmissing-export-lists
+                       -Wpartial-fields
+
+  default-language:    Haskell2010
+
+executable formality-hs
+  hs-source-dirs:      app
+  main-is:             Main.hs
+
+  build-depends:       base >= 4.11.1.0 && < 4.13
+                     , formality-hs
+                     
+
+  ghc-options:         -Wall
+                       -threaded
+                       -rtsopts
+                       -with-rtsopts=-N
+                       -Wincomplete-uni-patterns
+                       -Wincomplete-record-updates
+                       -Wcompat
+                       -Widentities
+                       -Wredundant-constraints
+                       -fhide-source-paths
+                       -Wmissing-export-lists
+                       -Wpartial-fields
+
+  default-language:    Haskell2010
+
+test-suite formality-hs-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+
+  build-depends:       base >= 4.11.1.0 && < 4.13
+                     , formality-hs
+                     
+
+  ghc-options:         -Wall
+                       -threaded
+                       -rtsopts
+                       -with-rtsopts=-N
+                       -Wincomplete-uni-patterns
+                       -Wincomplete-record-updates
+                       -Wcompat
+                       -Widentities
+                       -Wredundant-constraints
+                       -fhide-source-paths
+                       -Wmissing-export-lists
+                       -Wpartial-fields
+
+  default-language:    Haskell2010
+
+benchmark formality-hs-benchmark
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      benchmark
+  main-is:             Main.hs
+
+  build-depends:       base >= 4.11.1.0 && < 4.13
+                     , gauge
+                     , formality-hs
+                     
+
+  ghc-options:         -Wall
+                       -threaded
+                       -rtsopts
+                       -with-rtsopts=-N
+                       -Wincomplete-uni-patterns
+                       -Wincomplete-record-updates
+                       -Wcompat
+                       -Widentities
+                       -Wredundant-constraints
+                       -fhide-source-paths
+                       -Wmissing-export-lists
+                       -Wpartial-fields
+
+  default-language:    Haskell2010
