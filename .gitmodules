@@ -1,0 +1,9 @@
+[submodule "Formality-to-Nasic"]
+	path = Formality-to-Nasic
+	url = https://github.com/moonad/Formality-to-Nasic.git
+[submodule "Formality"]
+	path = Formality
+	url = https://github.com/moonad/Formality.git
+[submodule "Nasic"]
+	path = Nasic
+	url = https://github.com/MaiaVictor/Nasic.git
