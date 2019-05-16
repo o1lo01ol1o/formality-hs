@@ -90,7 +90,7 @@ toTerm (Lam _ _ bind body) = "^" <> maybe "" toTerm bind <> toTerm body
 toTerm (App _ func argm  ) = "@" <> toTerm func <> toTerm argm
 toTerm (Ref name         ) = bracket name where bracket n = "{" <> n <> "}"
 
--- TODO: fix quadratic complexity
+-- TODO: fix complexity
 erasNameBodyBindToJson :: Bool -> Text -> Maybe Formality -> Formality -> Value
 erasNameBodyBindToJson eras name body bind = object
     [ "eras" .= toJSON eras
