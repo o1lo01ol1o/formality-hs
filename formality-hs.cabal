@@ -29,9 +29,16 @@ library
                       , containers
                       , mtl
                       , lens 
+                      , text
+                      , parser-combinators
                       -- , llvm-hs < 7.0.0
                       , algebraic-graphs
                       , megaparsec
+                      , aeson
+                      , bytestring
+                      , unordered-containers
+                      , safe-exceptions
+
                      
 
   ghc-options:         -Wall
